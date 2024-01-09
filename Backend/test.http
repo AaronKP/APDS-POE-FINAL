@@ -1,0 +1,48 @@
+# GET request to retrieve the main API endpoint
+GET https://localhost:3000/api HTTP/1.1
+###
+
+# GET request to RETRIEVE ALL POSTS from the API/Db
+GET https://localhost:3000/api/posts HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFhcm9uS1AiLCJ1c2VyaWQiOiI2NTI3MmE2NjNjYjllZDEyZGMxNjFkNDEiLCJpYXQiOjE2OTcwNjU2MzIsImV4cCI6MTY5NzA2OTIzMn0.Gi4vEYZ6E0D51arqXdjyUK3PUpmx9yKehiDmVd-z4j0
+###
+
+# POST request to CREATE NEW POST in the API/Db
+POST https://localhost:3000/api/posts HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFhcm9uIiwidXNlcmlkIjoiNjU0NjI4NTlmMTNjNTE2NTFiMmNjY2E0IiwiaWF0IjoxNjk5MDk2NzIzLCJleHAiOjE2OTkxMDAzMjN9.C5rNx_YwNsrRfCohyDMslV_WdLTZDnxnVPYM4qMU4pI
+
+{
+    "id": "4",
+    "author": "Aaron",
+    "postTitle": "Eskom under strain. I hate Loadshedding",
+    "description": "Malfunctioning generators, wet coal, excuses..."
+}
+###
+
+# DELETE request to DELETE A POST USING ITS ID
+DELETE https://localhost:3000/api/posts/65272aee3cb9ed12dc161d44 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFhcm9uS1AiLCJ1c2VyaWQiOiI2NTI3MmE2NjNjYjllZDEyZGMxNjFkNDEiLCJpYXQiOjE2OTcwNjU2MzIsImV4cCI6MTY5NzA2OTIzMn0.Gi4vEYZ6E0D51arqXdjyUK3PUpmx9yKehiDmVd-z4j0
+###
+
+# POST request to SIGN UP/REGISTER A NEW USER
+POST https://localhost:3000/api/users/signup HTTP/1.1
+content-type: application/json
+
+{
+    "username": "goku",
+    "password": "dbz",
+    "name": "goku",
+    "surname":"son",
+    "email": "dbz@apds.com"
+}
+###
+
+# POST request to LOG IN USER
+POST https://localhost:3000/api/users/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "Aaron",
+    "password": "password123"
+}

@@ -1,0 +1,23 @@
+<table class="styled-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Author</th>
+        <th>Post Title</th>
+        <th>Description</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let post of posts">
+        <td>{{post.id}}</td>
+        <td>{{post.author}}</td>
+        <td>{{post.postTitle}}</td>
+        <td>{{post.description}}</td>
+        <td>
+          <button (click)="ondelete(post._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

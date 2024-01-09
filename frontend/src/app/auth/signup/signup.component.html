@@ -1,0 +1,43 @@
+<form (submit)="onsignup(signup)" class="signup-form" #signup="ngForm">
+    <input type="text" 
+           ngModel name="enteredusername" 
+           placeholder="Username" 
+           required 
+           minlength="1" 
+           pattern="[a-zA-Z0-9 ]*" 
+           class="input-field" 
+           #enteredusername="ngModel" />
+    <input type="password" 
+           ngModel name="enteredpassword" 
+           placeholder="Password" 
+           required 
+           minlength="1" 
+           pattern="[a-zA-Z0-9 ]*" 
+           class="input-field" 
+           #enteredpassword="ngModel" />
+    <input type="text" 
+           ngModel name="enteredname" 
+           placeholder="Name" 
+           required 
+           minlength="1" 
+           pattern="[a-zA-Z0-9 ]*" 
+           class="input-field" 
+           #enteredname="ngModel" />
+    <input type="text" 
+           ngModel name="enteredsurname" 
+           placeholder="Surname" 
+           required 
+           minlength="1" 
+           pattern="[a-zA-Z0-9 ]*" 
+           class="input-field" 
+           #enteredsurname="ngModel" />
+    <input type="email" 
+           ngModel name="enteredemail" 
+           placeholder="Email" 
+           required 
+           minlength="1" 
+           pattern="[a-zA-Z0-9 ]*" 
+           class="input-field" 
+           #enteredemail="ngModel" />
+    <button type="submit" class="signup-button">Sign-up</button>
+</form>

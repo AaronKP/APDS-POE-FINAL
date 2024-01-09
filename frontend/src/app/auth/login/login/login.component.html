@@ -1,0 +1,23 @@
+<form class="login-form" (submit)="onlogin(loginform)" #loginform="ngForm">
+    <input type="text" class="input-field"
+    ngModel name ="enteredusername"
+    placeholder="Username"
+    requiredminlength="1"
+    pattern="[a-zA-Z0-9 ]*"
+    #enteredusername="ngModel"
+    />
+    <div class="error-message" *ngIf="enteredusername.invalid && (enteredusername.dirty || enteredusername.touched)">Invalid</div>
+    <br>
+    <input type="password" class="input-field"
+    ngModel name ="enteredpassword"
+    placeholder="Password"
+    requiredminlength="1"
+    pattern="^([a-zA-Z0-9@*#]{8,15})$"
+    #enteredpassword="ngModel"
+    />
+    <div class="error-message" *ngIf="enteredpassword.invalid && (enteredpassword.dirty || enteredpassword.touched)">Invalid</div>
+    <br>
+
+    <button type="submit" class="login-button">Login</button>
+
+</form>
